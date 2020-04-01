@@ -1,0 +1,10 @@
+spring:
+   profiles:
+      active: test
+name: test-YAML
+environment: test
+servers:
+   - http://localhost:8082/authenticate
+   
+server:
+   port: 8081
