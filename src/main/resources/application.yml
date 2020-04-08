@@ -1,10 +1,30 @@
-spring:
-   profiles:
-      active: test
-name: test-YAML
-environment: test
-servers:
-   - http://localhost:8082/authenticate
-   
 server:
    port: 8081
+   servlet:
+      context-path: /authservice
+logging:
+   level:
+      root: INFO
+      org.auth: TRACE
+      org.springframework.web: TRACE
+      org.springframework.security: TRACE
+      org.apache.tomcat.util.net: TRACE
+spring:
+   thymeleaf:
+      cache: false
+   security:
+      oauth2:
+         client:
+            registration:
+               google:
+                  client-id: 532239482643-uoba620ilqeu0ik7slinmm5sqodjajtv.apps.googleusercontent.com
+                  client-secret: Z7dUlfh91nRgb1BjqijUky2Z
+                  redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
+               github:
+                  clientId: dea3155ea885cb49bd03
+                  clientSecret: da6c657ff50cdbd4c3a27908fc9263ed392441cc
+                  redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
+               facebook:
+                  clientId: 1971080219690910
+                  clientSecret: 2378004cf94a600eb128c221feae0771
+                  redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
