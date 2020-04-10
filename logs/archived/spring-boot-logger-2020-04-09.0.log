@@ -1,0 +1,190 @@
+2020-04-09 22:49:20,891 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AuthManagementApplication on ubuntu-pc with PID 5247 (/media/rajan/HardDrive/project/repo/project-apps/auth-management/target/classes started by rajan in /media/rajan/HardDrive/project/repo/project-apps/auth-management)
+2020-04-09 22:49:20,891 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-04-09 22:49:20,892 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-04-09 22:49:22,220 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2020-04-09 22:49:22,233 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-04-09 22:49:22,234 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-09 22:49:22,351 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-04-09 22:49:22,354 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-04-09 22:49:22,355 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1454 ms
+2020-04-09 22:49:22,379 TRACE org.auth.config.WebSecurityConfigurer [restartedMain] WebSecurity Intialized.
+2020-04-09 22:49:22,650 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'tokenAuthenticationFilter' configured for use
+2020-04-09 22:49:22,737 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69219896, org.springframework.security.web.context.SecurityContextPersistenceFilter@5defe83f, org.springframework.security.web.header.HeaderWriterFilter@74ae504e, org.springframework.security.web.csrf.CsrfFilter@702c7b2a, org.springframework.security.web.authentication.logout.LogoutFilter@4ffea968, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@296e86b3, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@605dfcfd, org.auth.filter.TokenAuthenticationFilter@628f0071, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ca927fa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a832601, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ae83959, org.springframework.security.web.session.SessionManagementFilter@4e893fef, org.springframework.security.web.access.ExceptionTranslationFilter@5e2dfb5b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a9f2ead]
+2020-04-09 22:49:22,946 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 22:49:23,032 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2020-04-09 22:49:23,080 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8081 (http) with context path '/authservice'
+2020-04-09 22:49:23,081 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AuthManagementApplication in 2.28 seconds (JVM running for 8198.441)
+2020-04-09 22:49:23,084 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2020-04-09 22:49:29,486 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-16] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 22:49:29,911 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AuthManagementApplication on ubuntu-pc with PID 5247 (/media/rajan/HardDrive/project/repo/project-apps/auth-management/target/classes started by rajan in /media/rajan/HardDrive/project/repo/project-apps/auth-management)
+2020-04-09 22:49:29,912 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-04-09 22:49:29,913 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-04-09 22:49:30,517 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2020-04-09 22:49:30,518 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-04-09 22:49:30,519 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-09 22:49:30,569 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-04-09 22:49:30,571 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-04-09 22:49:30,571 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 650 ms
+2020-04-09 22:49:30,577 TRACE org.auth.config.WebSecurityConfigurer [restartedMain] WebSecurity Intialized.
+2020-04-09 22:49:30,679 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'tokenAuthenticationFilter' configured for use
+2020-04-09 22:49:30,719 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c1d57d3, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b24bbb9, org.springframework.security.web.header.HeaderWriterFilter@6c5305b7, org.springframework.security.web.csrf.CsrfFilter@6ab227ba, org.springframework.security.web.authentication.logout.LogoutFilter@49856d46, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@3749a28, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3656beb8, org.auth.filter.TokenAuthenticationFilter@1705a860, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6571443e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@117b9b9a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ee46d2b, org.springframework.security.web.session.SessionManagementFilter@1050c1fe, org.springframework.security.web.access.ExceptionTranslationFilter@511695a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b0b280b]
+2020-04-09 22:49:30,786 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 22:49:30,847 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2020-04-09 22:49:30,896 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8081 (http) with context path '/authservice'
+2020-04-09 22:49:30,897 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AuthManagementApplication in 1.106 seconds (JVM running for 8206.256)
+2020-04-09 22:49:30,898 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2020-04-09 22:53:47,270 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-21] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 22:53:47,594 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AuthManagementApplication on ubuntu-pc with PID 5247 (/media/rajan/HardDrive/project/repo/project-apps/auth-management/target/classes started by rajan in /media/rajan/HardDrive/project/repo/project-apps/auth-management)
+2020-04-09 22:53:47,595 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-04-09 22:53:47,596 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-04-09 22:53:48,075 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2020-04-09 22:53:48,077 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-04-09 22:53:48,078 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-09 22:53:48,131 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-04-09 22:53:48,134 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-04-09 22:53:48,134 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 531 ms
+2020-04-09 22:53:48,140 TRACE org.auth.config.WebSecurityConfigurer [restartedMain] WebSecurity Intialized.
+2020-04-09 22:53:48,252 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'tokenAuthenticationFilter' configured for use
+2020-04-09 22:53:48,278 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'OAuth2LoginController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.auth.controller.OAuth2LoginController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@596e3a8a]
+2020-04-09 22:53:48,280 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-04-09 22:53:48,295 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-09 22:53:48,304 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'OAuth2LoginController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.auth.controller.OAuth2LoginController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@596e3a8a]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1201)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.auth.AuthManagementApplication.main(AuthManagementApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.auth.controller.OAuth2LoginController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@596e3a8a]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 23 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Authentication
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Authentication
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 29 common frames omitted
+2020-04-09 22:54:08,272 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AuthManagementApplication on ubuntu-pc with PID 5247 (/media/rajan/HardDrive/project/repo/project-apps/auth-management/target/classes started by rajan in /media/rajan/HardDrive/project/repo/project-apps/auth-management)
+2020-04-09 22:54:08,273 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-04-09 22:54:08,273 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-04-09 22:54:08,833 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2020-04-09 22:54:08,834 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-04-09 22:54:08,835 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-09 22:54:08,893 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-04-09 22:54:08,895 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-04-09 22:54:08,895 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 613 ms
+2020-04-09 22:54:08,901 TRACE org.auth.config.WebSecurityConfigurer [restartedMain] WebSecurity Intialized.
+2020-04-09 22:54:09,009 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'tokenAuthenticationFilter' configured for use
+2020-04-09 22:54:13,176 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'OAuth2LoginController' defined in file [/media/rajan/HardDrive/project/repo/project-apps/auth-management/target/classes/org/auth/controller/OAuth2LoginController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.auth.controller.OAuth2LoginController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	JWTTokenUtil cannot be resolved to a type
+	UsernamePasswordAuthenticationToken cannot be resolved to a type
+	DisabledException cannot be resolved to a type
+	DisabledException cannot be resolved to a type
+	BadCredentialsException cannot be resolved to a type
+	BadCredentialsException cannot be resolved to a type
+
+2020-04-09 22:54:13,178 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-04-09 22:54:13,191 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-09 22:54:13,193 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'OAuth2LoginController' defined in file [/media/rajan/HardDrive/project/repo/project-apps/auth-management/target/classes/org/auth/controller/OAuth2LoginController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.auth.controller.OAuth2LoginController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	JWTTokenUtil cannot be resolved to a type
+	UsernamePasswordAuthenticationToken cannot be resolved to a type
+	DisabledException cannot be resolved to a type
+	DisabledException cannot be resolved to a type
+	BadCredentialsException cannot be resolved to a type
+	BadCredentialsException cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.auth.AuthManagementApplication.main(AuthManagementApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.auth.controller.OAuth2LoginController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	JWTTokenUtil cannot be resolved to a type
+	UsernamePasswordAuthenticationToken cannot be resolved to a type
+	DisabledException cannot be resolved to a type
+	DisabledException cannot be resolved to a type
+	BadCredentialsException cannot be resolved to a type
+	BadCredentialsException cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:216)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	JWTTokenUtil cannot be resolved to a type
+	UsernamePasswordAuthenticationToken cannot be resolved to a type
+	DisabledException cannot be resolved to a type
+	DisabledException cannot be resolved to a type
+	BadCredentialsException cannot be resolved to a type
+	BadCredentialsException cannot be resolved to a type
+
+	at org.auth.controller.OAuth2LoginController.<init>(OAuth2LoginController.java:23)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:203)
+	... 24 common frames omitted
+2020-04-09 22:54:50,876 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AuthManagementApplication on ubuntu-pc with PID 5247 (/media/rajan/HardDrive/project/repo/project-apps/auth-management/target/classes started by rajan in /media/rajan/HardDrive/project/repo/project-apps/auth-management)
+2020-04-09 22:54:50,880 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-04-09 22:54:50,881 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-04-09 22:54:51,755 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2020-04-09 22:54:51,764 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-04-09 22:54:51,765 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-09 22:54:51,915 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-04-09 22:54:51,917 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-04-09 22:54:51,917 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1028 ms
+2020-04-09 22:54:51,923 TRACE org.auth.config.WebSecurityConfigurer [restartedMain] WebSecurity Intialized.
+2020-04-09 22:54:52,095 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'tokenAuthenticationFilter' configured for use

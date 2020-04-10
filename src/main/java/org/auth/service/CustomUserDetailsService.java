@@ -17,13 +17,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class CustomUserDetailsService implements UserDetailsService {
+public class CustomUserDetailsService extends AbstractUserDetailsService {
 	protected final Log logger = LogFactory.getLog(getClass());
 	@Autowired
 	@Qualifier("userAPIService")
@@ -45,9 +44,11 @@ public class CustomUserDetailsService implements UserDetailsService {
 			throw new UsernameNotFoundException(e.getMessage(), e);
 		}
 	}
+	@Override
 	public UserDetails loadUserById(Long userId) {
 		return new UserPrincipal();
 	}
+	@Override
 	public AuthUser getUserDetails(String username) throws UserNotFoudException {
 		AuthUser user = userDetailsCache.get(username);
 		if(user==null) {
@@ -58,7 +59,14 @@ public class CustomUserDetailsService implements UserDetailsService {
 		}
 		return user;
 	}
-
+	@Override
+	public void removeCachedUser(String username) throws UsernameNotFoundException {
+		AuthUser user = userDetailsCache.get(username);
+		if(user!=null) {
+			userDetailsCache.remove(username);
+			logger.info("user: "+username+" removed from cache." );
+		}
+	}
 	private AuthUser getUserFromAPI(String username)  throws UserNotFoudException  {
 		Map<String, String> uriVariables = new HashMap<String, String>();
 		uriVariables.put("username", username);

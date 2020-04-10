@@ -6,9 +6,9 @@ logging:
    level:
       root: INFO
       org.auth: TRACE
-      org.springframework.web: TRACE
-      org.springframework.security: TRACE
-      org.apache.tomcat.util.net: TRACE
+      org.springframework.web: INFO
+      org.springframework.security: INFO
+      org.apache.tomcat.util.net: INFO
 spring:
    thymeleaf:
       cache: false

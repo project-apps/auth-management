@@ -10,6 +10,6 @@ public class UserAPIService implements APIService {
 
 	@Override
 	public String getEndPointURL() {
-		return endPointURL+"/{username}";
+		return endPointURL+"/user/{username}";
 	}
 }

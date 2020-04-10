@@ -2,6 +2,7 @@ package org.auth.config;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.auth.filter.RequestFilter;
 import org.auth.filter.RestAuthenticationEntryPoint;
 import org.auth.filter.TokenAuthenticationFilter;
 import org.auth.service.CustomOAuth2UserService;
@@ -11,6 +12,7 @@ import org.auth.service.OAuth2AuthenticationFailureHandler;
 import org.auth.service.OAuth2AuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -33,7 +35,9 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 	private OAuth2AuthenticationSuccessHandler authenticationSuccessHandler;
 	@Autowired
 	private OAuth2AuthenticationFailureHandler authenticationFailureHandler;
-	
+	@Autowired
+	private RequestFilter requestFilter;
+
 	protected WebSecurityConfigurer() {
 		super();
 		logger.trace("WebSecurity Intialized.");
@@ -41,12 +45,12 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.
-		exceptionHandling().authenticationEntryPoint(new RestAuthenticationEntryPoint()).and().authorizeRequests()
+		http.csrf().disable()
+		.exceptionHandling().authenticationEntryPoint(new RestAuthenticationEntryPoint()).and().authorizeRequests()
 		.antMatchers("/", "/**").permitAll()
 		.and().oauth2Login().userInfoEndpoint().oidcUserService(oidcUserService).userService(oauth2UserService)
 		.and().successHandler(authenticationSuccessHandler).failureHandler(authenticationFailureHandler);
-		http.addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+		http.addFilterBefore(requestFilter, UsernamePasswordAuthenticationFilter.class);
 		
 	}
 
@@ -59,7 +63,11 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 	public TokenAuthenticationFilter tokenAuthenticationFilter() {
 		return new TokenAuthenticationFilter();
 	}
-	
+	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
 	/*@Bean
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
