@@ -1,1 +1,0 @@
-2020-04-20 10:43:15,772 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
