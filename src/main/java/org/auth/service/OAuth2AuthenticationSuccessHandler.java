@@ -31,6 +31,9 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 		AuthUser user = new AuthUser();
 		user.setEmail(userPrincipal.getEmail());
 		user.setName(userPrincipal.getName());
+		String names[] = userPrincipal.getName().split(" ");
+		user.setFirstName(names[0]);
+		user.setLastName(names[1]);
 		targetUrl += "/"+Base64Parser.serialize(user);
 
 		logger.debug("Redirecting to: " + targetUrl);
