@@ -5,6 +5,7 @@ import org.apache.commons.logging.LogFactory;
 import org.auth.filter.RequestFilter;
 import org.auth.filter.RestAuthenticationEntryPoint;
 import org.auth.filter.TokenAuthenticationFilter;
+import org.auth.service.CustomAuthorizationRequestResolver;
 import org.auth.service.CustomOAuth2UserService;
 import org.auth.service.CustomOidcUserService;
 import org.auth.service.CustomUserDetailsService;
@@ -19,6 +20,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
+import org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestResolver;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.client.RestTemplate;
 
@@ -37,7 +40,9 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 	private OAuth2AuthenticationFailureHandler authenticationFailureHandler;
 	@Autowired
 	private RequestFilter requestFilter;
-
+	@Autowired
+	protected ClientRegistrationRepository clientRegistrationRepository;
+	
 	protected WebSecurityConfigurer() {
 		super();
 		logger.trace("WebSecurity Intialized.");
@@ -48,15 +53,23 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 		http.csrf().disable()
 		.exceptionHandling().authenticationEntryPoint(new RestAuthenticationEntryPoint()).and().authorizeRequests()
 		.antMatchers("/", "/**").permitAll()
-		.and().oauth2Login().userInfoEndpoint().oidcUserService(oidcUserService).userService(oauth2UserService)
+		.and().oauth2Login().authorizationEndpoint().authorizationRequestResolver(authorizationRequestResolver())
+		.and().userInfoEndpoint().oidcUserService(oidcUserService).userService(oauth2UserService)
 		.and().successHandler(authenticationSuccessHandler).failureHandler(authenticationFailureHandler);
 		http.addFilterBefore(requestFilter, UsernamePasswordAuthenticationFilter.class);
+		//http.addFilterBefore(authorizationRequestRedirectFilter, OAuth2AuthorizationRequestRedirectFilter.class);
 		
 	}
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+	}
+	
+	public OAuth2AuthorizationRequestResolver  authorizationRequestResolver() {
+		CustomAuthorizationRequestResolver authorizationRequestResolver = 
+				new CustomAuthorizationRequestResolver(clientRegistrationRepository);
+		return authorizationRequestResolver;
 	}
 	
 	@Bean
