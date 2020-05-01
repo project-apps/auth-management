@@ -1,11 +1,11 @@
 server:
-   port: 8081
+   port: 8080
    servlet:
       context-path: /authservice
 logging:
    level:
       root: INFO
-      org.auth: TRACE
+      com.auth: TRACE
       org.springframework.web: INFO
       org.springframework.security: INFO
       org.apache.tomcat.util.net: INFO
