@@ -2,7 +2,6 @@ package com.auth.util;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,12 +15,8 @@ public class CustomRedirectStrategy extends DefaultRedirectStrategy {
 		redirectUrl = response.encodeRedirectURL(redirectUrl);
 
 		if (logger.isDebugEnabled()) {
-			logger.debug("Redirecting to '" + redirectUrl + "'");
+			logger.debug("Redirecting to: " + redirectUrl);
 		}
-		try {
-			request.getRequestDispatcher(redirectUrl).forward(request, response);
-		} catch (ServletException | IOException e) {
-			e.printStackTrace();
-		}
+		response.sendRedirect(redirectUrl);
 	}
 }

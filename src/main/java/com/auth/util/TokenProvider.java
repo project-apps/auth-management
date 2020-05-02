@@ -7,12 +7,12 @@ import javax.servlet.http.Cookie;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import com.auth.provider.UserPrincipal;
-import org.parser.Base64Parser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.util.SerializationUtils;
+
+import com.auth.provider.UserPrincipal;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -84,13 +84,4 @@ public class TokenProvider {
 	public <T> T deserialize(Cookie cookie, Class<T> cls) {
 		return cls.cast(SerializationUtils.deserialize(Base64.getUrlDecoder().decode(cookie.getValue())));
 	}
-	
-	public String encodeToString(String data) {
-		return Base64Parser.encodeToString(data);
-	}
-	public String decodeTOString(String data) {
-		return Base64Parser.decodeToString(data);
-	}
-
-
 }
