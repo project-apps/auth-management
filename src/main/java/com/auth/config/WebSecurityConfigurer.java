@@ -13,12 +13,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestResolver;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.client.RestTemplate;
 
-import com.auth.filter.RequestFilter;
 import com.auth.filter.RestAuthenticationEntryPoint;
-import com.auth.filter.TokenAuthenticationFilter;
 import com.auth.service.CustomAuthorizationRequestResolver;
 import com.auth.service.CustomOAuth2UserService;
 import com.auth.service.CustomOidcUserService;
@@ -39,8 +36,9 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 	private OAuth2AuthenticationSuccessHandler authenticationSuccessHandler;
 	@Autowired
 	private OAuth2AuthenticationFailureHandler authenticationFailureHandler;
-	@Autowired
-	private RequestFilter requestFilter;
+	/*
+	 * @Autowired private RequestFilter requestFilter;
+	 */
 	@Autowired
 	protected ClientRegistrationRepository clientRegistrationRepository;
 	
@@ -57,7 +55,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 		.and().oauth2Login().authorizationEndpoint().authorizationRequestResolver(authorizationRequestResolver())
 		.and().userInfoEndpoint().oidcUserService(oidcUserService).userService(oauth2UserService)
 		.and().successHandler(authenticationSuccessHandler).failureHandler(authenticationFailureHandler);
-		http.addFilterBefore(requestFilter, UsernamePasswordAuthenticationFilter.class);
+		//http.addFilterBefore(requestFilter, UsernamePasswordAuthenticationFilter.class);
 		//http.addFilterBefore(authorizationRequestRedirectFilter, OAuth2AuthorizationRequestRedirectFilter.class);
 		
 	}
@@ -73,10 +71,10 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 		return authorizationRequestResolver;
 	}
 	
-	@Bean
-	public TokenAuthenticationFilter tokenAuthenticationFilter() {
-		return new TokenAuthenticationFilter();
-	}
+	/*
+	 * @Bean public TokenAuthenticationFilter tokenAuthenticationFilter() { return
+	 * new TokenAuthenticationFilter(); }
+	 */
 	@Bean
 	@Override
 	public AuthenticationManager authenticationManagerBean() throws Exception {

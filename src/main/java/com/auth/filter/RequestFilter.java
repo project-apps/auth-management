@@ -20,7 +20,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import io.jsonwebtoken.ExpiredJwtException;
 
-@Component
+/*@Component
 public class RequestFilter extends OncePerRequestFilter {
 	
 	@Autowired
@@ -60,4 +60,4 @@ public class RequestFilter extends OncePerRequestFilter {
 		}
 		filterChain.doFilter(request, response);
 	}
-}
+}*/

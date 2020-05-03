@@ -20,7 +20,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-public class TokenAuthenticationFilter extends OncePerRequestFilter {
+/*public class TokenAuthenticationFilter extends OncePerRequestFilter {
 	private static final Log logger = LogFactory.getLog(TokenAuthenticationFilter.class);
 	@Autowired
 	private TokenProvider tokenProvider;
@@ -55,4 +55,4 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         }
         return null;
     }
-}
+}*/

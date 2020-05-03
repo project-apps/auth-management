@@ -1,17 +1,7 @@
-server:
-   port: 8080
-   servlet:
-      context-path: /authservice
-logging:
-   level:
-      root: INFO
-      com.auth: TRACE
-      org.springframework.web: INFO
-      org.springframework.security: INFO
-      org.apache.tomcat.util.net: INFO
 spring:
    thymeleaf:
       cache: false
+   profiles: dev
    security:
       oauth2:
          client:
@@ -21,10 +11,43 @@ spring:
                   client-secret: Z7dUlfh91nRgb1BjqijUky2Z
                   redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
                github:
-                  clientId: dea3155ea885cb49bd03
-                  clientSecret: da6c657ff50cdbd4c3a27908fc9263ed392441cc
+                  clientId: b46f8bf4f2c9ad6c5b1f
+                  clientSecret: 77a9d229b2fdaf59998a72536f91f4eff87e1271
                   redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
                facebook:
                   clientId: 1971080219690910
                   clientSecret: 2378004cf94a600eb128c221feae0771
                   redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
+logging:
+   level:
+      root: INFO
+      com.auth: TRACE
+      org.springframework.web: INFO
+      org.springframework.security: INFO
+      org.apache.tomcat.util.net: INFO
+server:
+   port: 8080
+   servlet:
+      context-path: /authservice 
+---
+spring:  
+   profiles: release
+   security:
+      oauth2:
+         client:
+            registration:
+               github:
+                  clientId: 1cf160ec0a6d97b61fc5
+                  clientSecret: 161d213ac0d4be6b5695e6a132fe549eda60915d
+                  redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
+logging:
+   level:
+      root: INFO
+      com.auth: TRACE
+      org.springframework.web: INFO
+      org.springframework.security: INFO
+      org.apache.tomcat.util.net: INFO
+server:
+   port: 8080
+   servlet:
+      context-path: /authservice 
