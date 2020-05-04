@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property resource="application-${spring.profiles.active}.properties" />
+    <property resource="application-${spring.profiles.active}.properties"></property>
 	<property name="LOG_PATH" value="${logging.file.path}" />
 	<appender name="Console"
 		class="ch.qos.logback.core.ConsoleAppender">
