@@ -24,11 +24,8 @@ import com.auth.provider.UserPrincipal;
 @Service
 public class CustomUserDetailsService extends AbstractUserDetailsService {
 	protected final Log logger = LogFactory.getLog(CustomUserDetailsService.class);
-	@Autowired
-	private UserAPIService apiService;
 	@Autowired 
 	private RestTemplate restTemplate;
-	 
 
 	private Map<String, AuthUser> userDetailsCache =  new ConcurrentHashMap<String, AuthUser>();
 
@@ -53,7 +50,7 @@ public class CustomUserDetailsService extends AbstractUserDetailsService {
 		AuthUser user = userDetailsCache.get(username);
 		if(user==null) {
 			logger.info("User not found in cache, Getting form API.");
-			user = getUserFromAPI(username);
+			user = null;//getUserFromAPI(username);
 			userDetailsCache.put(username, user);
 			logger.info("User placed in cache.");
 		}
@@ -67,7 +64,7 @@ public class CustomUserDetailsService extends AbstractUserDetailsService {
 			logger.info("user: "+username+" removed from cache." );
 		}
 	}
-	private AuthUser getUserFromAPI(String username)  throws UserNotFoudException  {
+	/*private AuthUser getUserFromAPI(String username)  throws UserNotFoudException  {
 		Map<String, String> uriVariables = new HashMap<String, String>();
 		uriVariables.put("username", username);
 		logger.info("Getting user for username: "+username+" from API.");
@@ -87,5 +84,5 @@ public class CustomUserDetailsService extends AbstractUserDetailsService {
 	public void delete(AuthUser user) {
 		Map<String,AuthUser> params = new HashMap<String, AuthUser>();
 		restTemplate.delete(apiService.getEndPointURL(),params);
-	}
+	}*/
 }

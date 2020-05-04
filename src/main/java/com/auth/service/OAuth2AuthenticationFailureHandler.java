@@ -24,6 +24,8 @@ public class OAuth2AuthenticationFailureHandler extends SimpleUrlAuthenticationF
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException exception) throws IOException, ServletException {
 		logger.debug("login failure.");
+		exception.printStackTrace();
+		logger.error(exception.getStackTrace());
 		super.onAuthenticationFailure(request, response, exception);
 	}
 }
