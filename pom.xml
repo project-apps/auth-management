@@ -12,7 +12,7 @@
 	<groupId>com.auth</groupId>
 	<artifactId>auth-management</artifactId>
 	<version>1.0.0.RELEASE</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>authservice</name>
 	<description>auth-management for user authentication</description>
 
